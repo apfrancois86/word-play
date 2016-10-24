@@ -10,6 +10,12 @@ $(document).ready(function(){
         longWords.push(word);
       }
     });
+
+    longWords.reverse();
+    var reversed = longWords.join(" ");
+    console.log(reversed);
+
+    $(".display").text(reversed);
   }); //form submit
 }); //doc ready
 
