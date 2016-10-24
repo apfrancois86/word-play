@@ -5,15 +5,12 @@ $(document).ready(function(){
     var words = sentence.split(" ");
     var longWords = [];
 
-    words.forEach(function(word) {
-      if (word.length >= 3) {
-        longWords.push(word);
-      }
+    var longWords = words.filter(function(word) {
+      return word.length > 3;
     });
 
     longWords.reverse();
     var reversed = longWords.join(" ");
-    console.log(reversed);
 
     $(".display").text(reversed);
   }); //form submit
